@@ -1,0 +1,15 @@
+User searches "Inception"
+        ↓
+updateSearchCount("Inception", movieData)
+        ↓
+Check if "Inception" exists in Appwrite DB
+        ↓
+If YES: count++ (e.g., 5→6)
+If NO: Create new doc with count=1
+        ↓
+(When app loads)
+getTrendingMovies() queries Appwrite
+        ↓
+Appwrite returns top 5 searches ordered by count (descending)
+        ↓
+Display in UI with rankings
